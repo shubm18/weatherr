@@ -1,0 +1,192 @@
+/* App.css */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #ffffff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* App Container */
+.App {
+  text-align: center;
+  background: linear-gradient(135deg, #1f1f1f, #252525);
+  border: 1px solid #333;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  margin: 20px;
+}
+
+/* Header */
+.app-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 20px;
+}
+
+.city-search {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  outline: none;
+  text-align: center;
+  color: #ffffff;
+  background-color: #2c2c2c;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.city-search:focus {
+  background-color: #333;
+  border-color: #ff8a00;
+  box-shadow: 0 0 10px #ff8a00;
+}
+
+/* Loading Spinner */
+.Oval {
+  margin-top: 20px;
+  animation: fadeIn 1s ease-in-out infinite;
+}
+
+/* Error Message */
+.error-message {
+  color: #e53935;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-message span {
+  margin-left: 10px;
+}
+
+/* Weather Data Display */
+.city-name h2 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.city-name span {
+  font-size: 20px;
+  font-weight: 400;
+  color: #ff8a00;
+}
+
+.date {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #aaa;
+}
+
+.icon-temp {
+  margin-top: 20px;
+  font-size: 50px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+}
+
+.icon-temp img {
+  margin-right: 15px;
+}
+
+.deg {
+  font-size: 28px;
+  color: #ff8a00;
+}
+
+.des-wind {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #ccc;
+}
+
+.des-wind p {
+  margin: 5px 0;
+}
+
+.des-wind p:first-child {
+  text-transform: capitalize;
+}
+
+/* Hover Effects for Interactivity */
+.city-search:hover {
+  background-color: #333;
+  border-color: #e52e71;
+}
+
+.error-message:hover {
+  color: #ff8a00;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .App {
+    padding: 30px;
+    max-width: 90%;
+  }
+
+  .app-name {
+    font-size: 24px;
+  }
+
+  .city-search {
+    font-size: 16px;
+  }
+
+  .icon-temp {
+    font-size: 40px;
+  }
+
+  .deg {
+    font-size: 22px;
+  }
+
+  .date,
+  .des-wind p {
+    font-size: 16px;
+  }
+}
+
+/* Keyframe for smooth fade-in effect */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
